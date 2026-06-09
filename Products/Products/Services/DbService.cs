@@ -201,7 +201,7 @@ public class DbService : IDbService
             });
         }
         
-        return results;
+        return results.Any() ? results : throw new NotFoundException("No makers found.");
     
         }
 
